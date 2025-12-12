@@ -1,0 +1,136 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    font-family: 'JetBrainsMono Nerd Font Mono', 'FontAwesome';
+    font-size: 12px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+    /* background-color: rgb(0, 0, 0); */
+    /* background-color: rgba(225, 224, 221, 0.4); */
+    background-color: rgba(41, 41, 50, 0.8);
+    /* background-image: linear-gradient(50deg, rgba(225, 224, 221, 0.1), rgba(2, 2, 14, 0.9), #9ac5d4); */
+}
+
+.modules-left {
+}
+
+.modules-center {
+}
+
+.modules-right {
+
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: none
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd,
+#window,
+#workspaces,
+
+#workspaces button {
+    /* color: #b8b1a9; */
+    color: #bbbab8;
+    padding: 0;
+    margin: 0 2px;
+}
+
+#workspaces button.active {
+    /* color: #ffffff; */
+}
+
+#main {
+    padding: 2px 8px 2px 16px;
+    border-radius: 4px;
+    /* border: 1px solid #3e3e49; */
+    /* background-color: rgba(41, 41, 50, 1); */
+    /* background-color: #000000; */
+
+}
+
+#custom-flair {
+    font-weight: 900;
+    padding: 0 12px;
+    color: white;
+    background-image: linear-gradient(50deg, #ff9ad7 40%, #84c8ff 75%, #78d89b);
+    /* border-radius: 16px;
+    margin: 6px 0 0 2px; */
+}
+
+#custom-disk {
+    color: white;
+    background-color: #37ad76;
+    /* border-radius: 12px;
+    margin: 4px 0; */
+    padding: 0 8px;
+}
+
+#custom-disk-nvme {
+    color: white;
+    background-color: #37ada3;
+    /* border-radius: 12px;
+    margin: 4px 0; */
+    padding: 0 8px;
+}
+
+#custom-disk-storage {
+    color: white;
+    background-color: #6e8fd7;
+    /* border-radius: 12px;
+    margin: 4px 0; */
+    padding: 0 8px;
+}
+
+#custom-gpu-temp {
+    color: #bbbab8;
+}
+
+#custom-cpu-temp {
+    color: #bbbab8;
+}
+
+#clock {
+    margin-right: 8px;
+}
+
+#custom-start {
+    font-size: 20px;
+    color: #bbbab8;
+    margin-left: 8px;
+}

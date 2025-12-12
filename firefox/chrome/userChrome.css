@@ -1,0 +1,16 @@
+#nav-bar {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.browser-toolbox-background {
+    /* background-color: rgba(255, 250, 241, 0.8) !important; */
+    background-color: rgba(41, 41, 50, 0.8) !important;
+}
+
+.tab-background:is([selected]) {
+    /* background-color: rgba(255, 250, 241, 0.9) !important; */
+    background-color: rgba(41, 41, 50, 0.6) !important;
+    color: white !important;
+}
+

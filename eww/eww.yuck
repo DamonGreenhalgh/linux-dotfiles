@@ -1,0 +1,20 @@
+(defwindow example
+           :monitor 0
+           :geometry (geometry :x "0"
+                               :y "20px"
+                               :width "90%"
+                               :height "100px"
+                               :anchor "top center")
+           :stacking "fg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+           (hertas-widget))
+
+(defwidget hertas-widget [] 
+    (image
+        :path "/home/daom/Pictures/hertas.gif"
+        :width "100px"
+        :height "100px"
+        :class "logo"
+    ))

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "shell",
+    "display",
+    "wm",
+    "cursor",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "break",
+    "colors",
+    "break"
+  ],
+  "logo": {
+    "type": "kitty",
+    "source": "/home/damon/Pictures/sticker_bronya_1.webp",
+    "width": 30,
+    "position": "left",
+    "padding": {
+      "top": 1,
+      "right": 1,
+      "left": 0
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorCustomizations": {
+        "window.activeBorder": "#0dcdcd",
+        "editor.foreground": "#b8b1a9",
+        "titleBar.inactiveBackground": "#292932",
+        "titleBar.activeBackground": "#292932",
+        "activityBar.background": "#292932",
+        "sideBar.background": "#292932",
+        "statusBar.background": "#292932",
+        "statusBar.noFolderBackground": "#292932",
+        "panel.background": "#292932",
+        "editorGroupHeader.tabsBackground": "#292932",
+        "tab.activeBackground": "#292932",
+        "tab.inactiveBackground": "#292932",
+        "editor.background": "#292932"
+    },
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "editor.fontWeight": "600",
+}

@@ -1,0 +1,4 @@
+style=/home/damon/.config/wofi/style.css
+width=512
+height=512
+prompt=Start typing to search for a application...

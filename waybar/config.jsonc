@@ -1,0 +1,76 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "spacing": 0, // Gaps between modules (4px)
+    "mode": "dock",    // overlay | dock
+    "modules-left": [
+        "custom/start"
+    ],
+    "modules-center": [
+        "custom/cpu-temp", 
+        "custom/gpu-temp",
+        "custom/disk",
+        "custom/disk-nvme",
+        "custom/disk-storage"
+    ],
+    "modules-right": [
+        "hyprland/workspaces",
+        "clock"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            // "active": "",
+            // "default": ""
+        },
+        "persistent-workspaces": {
+            "DP-1": 1
+        }
+    },
+    "clock": {
+        "interval": 1,
+        "timezone": "Pacific/Auckland",
+        "format": "{:%A, %d %B %Y %I:%M %p}",
+        // "format": "{:%I\n%M}",
+        "tooltip": false
+    },
+    "custom/start": {
+        "format": "󰣇",
+        "tooltip": false
+    },
+    "custom/flair": {
+        "format": "... . . / -.-- --- ..- / - --- -- --- .-. .-. --- .-- ",
+        "tooltip": false
+    },
+    "custom/disk": {
+        "exec": "df -h / | awk 'NR==2 {print $4}'",
+        "interval": 60,
+        "format": "sda2: {}",
+        "tooltip": false
+    },
+    "custom/disk-nvme": {
+        "exec": "df -h /mnt/nvme | awk 'NR==2 {print $4}'",
+        "interval": 6,
+        "format": "nvme0n1p1: {}",
+        "tooltip": false
+    },
+    "custom/disk-storage": {
+        "exec": "df -h /mnt/storage | awk 'NR==2 {print $4}'",
+        "interval": 6,
+        "format": "sdb1: {}",
+        "tooltip": false
+    },
+        "custom/cpu-temp": {
+        "exec": "/home/damon/.config/scripts/get_temps.sh",
+        "format": " c: {}°C ",
+        "interval": 6,
+        "tooltip": false 
+    },
+    "custom/gpu-temp": {
+        "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader",
+        "format": "g: {}°C  ",
+        "interval": 6,
+        "tooltip": false
+    }
+}
