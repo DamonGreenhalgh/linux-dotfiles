@@ -49,21 +49,21 @@
     "custom/disk": {
         "exec": "df -h / | awk 'NR==2 {print $4}'",
         "interval": 60,
-        "format": "     /: {} ",
+        "format": "    /: {} ",
         "tooltip": false
     },
-    "custom/disk-nvme": {
-        "exec": "df -h /mnt/nvme | awk 'NR==2 {print $4}'",
-        "interval": 6,
-        "format": "/mnt/nvme: {} ",
-        "tooltip": false
-    },
-    "custom/disk-storage": {
-        "exec": "df -h /mnt/storage | awk 'NR==2 {print $4}'",
-        "interval": 6,
-        "format": "/mnt/storage: {}   ",
-        "tooltip": false
-    },
+    // "custom/disk-nvme": {
+    //     "exec": "df -h /mnt/nvme | awk 'NR==2 {print $4}'",
+    //     "interval": 6,
+    //     "format": "/mnt/nvme: {} ",
+    //     "tooltip": false
+    // },
+    // "custom/disk-storage": {
+    //     "exec": "df -h /mnt/storage | awk 'NR==2 {print $4}'",
+    //     "interval": 6,
+    //     "format": "/mnt/storage: {}   ",
+    //     "tooltip": false
+    // },
         "custom/cpu-temp": {
         "exec": "/home/damon/.config/scripts/get_temps.sh",
         "format": "  cpu: {}°C ",
