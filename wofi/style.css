@@ -23,10 +23,10 @@ window {
 }
 
 #outer-box {
-    background-color: rgba(41, 41, 50, 0.8);
+    background-color: rgba(41, 41, 50, 1);
     /* background-image: linear-gradient(50deg, rgba(225, 224, 221, 0.4) 90%, #efd0c8 92.5%, #9ac5d4); */
     border-radius: 0px;
-    border: 1px solid #53504dff;
+    border: 1px solid #3e3e49;
 }
 
 #inner-box {

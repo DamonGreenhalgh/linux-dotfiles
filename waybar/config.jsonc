@@ -5,17 +5,20 @@
     "spacing": 0, // Gaps between modules (4px)
     "mode": "dock",    // overlay | dock
     "modules-left": [
-        "custom/start"
+        "custom/start",
+        "custom/hsr",
+        "custom/zzz",
+        "custom/wuwa"
     ],
     "modules-center": [
         "custom/cpu-temp", 
         "custom/gpu-temp",
         "custom/disk",
         "custom/disk-nvme",
-        "custom/disk-storage"
+        "custom/disk-storage",
+        "hyprland/workspaces"
     ],
     "modules-right": [
-        "hyprland/workspaces",
         "clock"
     ],
     "hyprland/workspaces": {
@@ -33,7 +36,7 @@
         "timezone": "Pacific/Auckland",
         "format": "{:%A, %d %B %Y %I:%M %p}",
         // "format": "{:%I\n%M}",
-        "tooltip": false
+        "tooltip": false,
     },
     "custom/start": {
         "format": "󰣇",
@@ -46,31 +49,55 @@
     "custom/disk": {
         "exec": "df -h / | awk 'NR==2 {print $4}'",
         "interval": 60,
-        "format": "sda2: {}",
+        "format": "     /: {} ",
         "tooltip": false
     },
     "custom/disk-nvme": {
         "exec": "df -h /mnt/nvme | awk 'NR==2 {print $4}'",
         "interval": 6,
-        "format": "nvme0n1p1: {}",
+        "format": "/mnt/nvme: {} ",
         "tooltip": false
     },
     "custom/disk-storage": {
         "exec": "df -h /mnt/storage | awk 'NR==2 {print $4}'",
         "interval": 6,
-        "format": "sdb1: {}",
+        "format": "/mnt/storage: {}   ",
         "tooltip": false
     },
         "custom/cpu-temp": {
         "exec": "/home/damon/.config/scripts/get_temps.sh",
-        "format": " c: {}°C ",
+        "format": "  cpu: {}°C ",
         "interval": 6,
         "tooltip": false 
     },
     "custom/gpu-temp": {
         "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader",
-        "format": "g: {}°C  ",
+        "format": "gpu: {}°C",
         "interval": 6,
         "tooltip": false
+    },
+    "custom/hsr": {
+        "exec": "python3 /home/damon/.config/scripts/get_gacha_label.py hsr",
+        "interval": 3600,
+        "return-type": "json",
+        "format": "{text}",
+        "format-alt": "{alt}",
+        "on-click": "xdg-open https://hsr.hoyoverse.com/en-us/"
+    },
+    "custom/zzz": {
+        "exec": "python3 /home/damon/.config/scripts/get_gacha_label.py zzz",
+        "interval": 3600,
+        "return-type": "json",
+        "format": "{text}",
+        "format-alt": "{alt}",
+        "on-click": "xdg-open https://zenless.hoyoverse.com/en-us/"
+    },
+    "custom/wuwa": {
+        "exec": "python3 /home/damon/.config/scripts/get_gacha_label.py wuwa",
+        "interval": 3600,
+        "return-type": "json",
+        "format": "{text}",
+        "format-alt": "{alt}",
+        "on-click": "xdg-open https://wutheringwaves.kurogames.com/en/"
     }
 }
