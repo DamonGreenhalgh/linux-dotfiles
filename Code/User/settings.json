@@ -1,22 +1,23 @@
 {
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Atom One Dark",
-    "workbench.colorCustomizations": {
-        "window.activeBorder": "#0dcdcd",
-        "editor.foreground": "#b8b1a9",
-        "titleBar.inactiveBackground": "#292932",
-        "titleBar.activeBackground": "#292932",
-        "activityBar.background": "#292932",
-        "sideBar.background": "#292932",
-        "statusBar.background": "#292932",
-        "statusBar.noFolderBackground": "#292932",
-        "panel.background": "#292932",
-        "editorGroupHeader.tabsBackground": "#292932",
-        "tab.activeBackground": "#292932",
-        "tab.inactiveBackground": "#292932",
-        "editor.background": "#292932"
-    },
-    "editor.minimap.enabled": false,
-    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
-    "editor.fontWeight": "600",
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorCustomizations": {
+    "window.activeBorder": "#0dcdcd",
+    "editor.foreground": "#929292",
+    "titleBar.inactiveBackground": "#26282b",
+    "titleBar.activeBackground": "#26282b",
+    "activityBar.background": "#26282b",
+    "sideBar.background": "#1e1e21",
+    "sideBarSectionHeader.background": "#1e1e21",
+    "statusBar.background": "#26282b",
+    "statusBar.noFolderBackground": "#26282b",
+    "panel.background": "#26282b",
+    "editorGroupHeader.tabsBackground": "#1a1a1c",
+    "tab.activeBackground": "#1e1e21",
+    "tab.inactiveBackground": "#1a1a1c",
+    "editor.background": "#1a1a1c"
+  },
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontWeight": "600"
 }

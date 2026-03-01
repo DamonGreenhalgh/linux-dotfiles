@@ -1,103 +1,156 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "spacing": 0, // Gaps between modules (4px)
-    "mode": "dock",    // overlay | dock
-    "modules-left": [
-        "custom/start",
-        "custom/hsr",
-        "custom/zzz",
-        "custom/wuwa"
+  "layer": "top", // Waybar at top layer
+  "position": "bottom", // Waybar position (top|bottom|left|right)
+  "spacing": 0, // Gaps between modules (4px)
+  "mode": "dock", // overlay | dock
+  "modules-left": [
+    "group/hsr",
+    "wlr/taskbar"
+    // "custom/flair",
+    // "custom/start",
+  ],
+  "modules-center": [],
+  "modules-right": [
+    // "custom/ffxiv",
+    // "hyprland/workspaces",
+    "group/ffxiv",
+    "group/disk",
+    "clock"
+  ],
+  "group/disk": {
+    "orientation": "horizontal",
+    "modules": ["custom/disk"]
+  },
+  "group/hsr": {
+    "orientation": "horizontal",
+    "modules": ["custom/hsr-icon", "custom/hsr"]
+  },
+  "group/ffxiv": {
+    "orientation": "horizontal",
+    "modules": [
+      // "custom/ffxiv-icon",
+      "custom/t1-label",
+      "custom/t1",
+      "custom/rdm",
+      "custom/t2-label",
+      "custom/t2",
+      "custom/rdm",
+      "custom/t3-label",
+      "custom/t3",
+      "custom/mnk",
+      "custom/t4p1-label",
+      "custom/t4p1",
+      "custom/mnk",
+      "custom/t4p2-label",
+      "custom/t4p2",
+      "custom/mnk",
     ],
-    "modules-center": [
-        "custom/cpu-temp", 
-        "custom/gpu-temp",
-        "custom/disk",
-        "custom/disk-nvme",
-        "custom/disk-storage",
-        "hyprland/workspaces"
-    ],
-    "modules-right": [
-        "clock"
-    ],
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            // "active": "",
-            // "default": ""
-        },
-        "persistent-workspaces": {
-            "DP-1": 1
-        }
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      // "active": "",
+      // "default": ""
     },
-    "clock": {
-        "interval": 1,
-        "timezone": "Pacific/Auckland",
-        "format": "{:%A, %d %B %Y %I:%M %p}",
-        // "format": "{:%I\n%M}",
-        "tooltip": false,
-    },
-    "custom/start": {
-        "format": "󰣇",
-        "tooltip": false
-    },
-    "custom/flair": {
-        "format": "... . . / -.-- --- ..- / - --- -- --- .-. .-. --- .-- ",
-        "tooltip": false
-    },
-    "custom/disk": {
-        "exec": "df -h / | awk 'NR==2 {print $4}'",
-        "interval": 60,
-        "format": "    /: {} ",
-        "tooltip": false
-    },
-    // "custom/disk-nvme": {
-    //     "exec": "df -h /mnt/nvme | awk 'NR==2 {print $4}'",
-    //     "interval": 6,
-    //     "format": "/mnt/nvme: {} ",
-    //     "tooltip": false
-    // },
-    // "custom/disk-storage": {
-    //     "exec": "df -h /mnt/storage | awk 'NR==2 {print $4}'",
-    //     "interval": 6,
-    //     "format": "/mnt/storage: {}   ",
-    //     "tooltip": false
-    // },
-        "custom/cpu-temp": {
-        "exec": "/home/damon/.config/scripts/get_temps.sh",
-        "format": "  cpu: {}°C ",
-        "interval": 6,
-        "tooltip": false 
-    },
-    "custom/gpu-temp": {
-        "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader",
-        "format": "gpu: {}°C",
-        "interval": 6,
-        "tooltip": false
-    },
-    "custom/hsr": {
-        "exec": "python3 /home/damon/.config/scripts/get_gacha_label.py hsr",
-        "interval": 3600,
-        "return-type": "json",
-        "format": "{text}",
-        "format-alt": "{alt}",
-        "on-click": "xdg-open https://hsr.hoyoverse.com/en-us/"
-    },
-    "custom/zzz": {
-        "exec": "python3 /home/damon/.config/scripts/get_gacha_label.py zzz",
-        "interval": 3600,
-        "return-type": "json",
-        "format": "{text}",
-        "format-alt": "{alt}",
-        "on-click": "xdg-open https://zenless.hoyoverse.com/en-us/"
-    },
-    "custom/wuwa": {
-        "exec": "python3 /home/damon/.config/scripts/get_gacha_label.py wuwa",
-        "interval": 3600,
-        "return-type": "json",
-        "format": "{text}",
-        "format-alt": "{alt}",
-        "on-click": "xdg-open https://wutheringwaves.kurogames.com/en/"
+    "persistent-workspaces": {
+      "DP-1": 1
     }
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["FF Logs"],
+    "rewrite": { "Firefox Developer Edition": "Firefox Dev" },
+    "active-first": false
+  },
+  "clock": {
+    "interval": 1,
+    "timezone": "Pacific/Auckland",
+    // "format": "{:%A, %d %B %Y %I:%M %p}",
+    "format": "{:%a %d/%m %I:%M %p}",
+    "tooltip": false
+  },
+  "custom/start": {
+    "format": "󰣇",
+    // "format": " ",
+    "tooltip": false,
+    "on-click": "poweroff"
+  },
+  "custom/flair": {
+    "format": "... . . / -.-- --- ..- / - --- -- --- .-. .-. --- .-- ",
+    "tooltip": false
+  },
+  "custom/disk": {
+    "exec": "df -h / | awk 'NR==2 {print $4}'",
+    "interval": 60,
+    "format": "   /: {} remaining  ",
+    "class": "success",
+    "tooltip": false
+  },
+  "custom/hsr-icon": {
+    "format": " ",
+    "tooltip": false
+  },
+  "custom/hsr": {
+    "exec": "python3 /home/damon/.config/scripts/get_gacha_label.py hsr",
+    "interval": 3600,
+    "return-type": "json",
+    "format": "{text}",
+    "on-click": "flatpak run moe.launcher.honkers-launcher",
+  },
+  "custom/ffxiv-icon": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "xdg-open https://www.fflogs.com/character/id/17460879",
+  },
+  "custom/mnk": {
+    "format": " ",
+    "tooltip": false
+  },
+  "custom/rdm": {
+    "format": " ",
+    "tooltip": false
+  },
+  "custom/t1-label": {
+    "format": " M9: ",
+    "tooltip": false
+  },
+  "custom/t2-label": {
+    "format": "  M10: ",
+    "tooltip": false
+  },
+  "custom/t3-label": {
+    "format": "  M11: ",
+    "tooltip": false
+  },
+  "custom/t4p1-label": {
+    "format": "  M12P1: ",
+    "tooltip": false
+  },
+  "custom/t4p2-label": {
+    "format": "  M12P2: ",
+    "tooltip": false
+  },
+  "custom/t1": {
+    "format": "95",
+    "tooltip": false
+  },
+  "custom/t2": {
+    "format": "95",
+    "tooltip": false
+  },
+  "custom/t3": {
+    "format": "97",
+    "tooltip": false
+  },
+  "custom/t4p1": {
+    "format": "85",
+    "tooltip": false
+  },
+  "custom/t4p2": {
+    "format": "71",
+    "tooltip": false
+  },
 }

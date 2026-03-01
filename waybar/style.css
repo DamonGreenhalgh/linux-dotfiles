@@ -1,49 +1,46 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
-    font-family: 'JetBrainsMono Nerd Font Mono', 'FontAwesome';
-    font-size: 12px;
-    font-weight: bold;
+  /* `otf-font-awesome` is required to be installed for icons */
+  /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+  font-family: "JetBrainsMono Nerd Font Mono", "FontAwesome";
+  font-size: 12px;
+  font-weight: bold;
 }
 
 window#waybar {
-    background-color: transparent;
-    transition-property: background-color;
-    transition-duration: .5s;
-    color: #bbbab8;
-    /* background-color: rgb(0, 0, 0); */
-    /* background-color: rgba(225, 224, 221, 0.4); */
-    background-color: rgba(41, 41, 50, 1);
-    /* border-top: 1px solid #3e3e49; */
-    /* background-image: linear-gradient(50deg, rgba(225, 224, 221, 0.1), rgba(2, 2, 14, 0.9), #9ac5d4); */
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  color: #929292;
+  background-color: rgba(41, 41, 50, 0.6);
+  border-top: 1px solid #3e3e49;
 }
 
 .modules-left {
 }
 
 .modules-center {
-
 }
 
 .modules-right {
+  padding: 0 4px 0 0;
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    /* box-shadow: inset 0 -3px transparent; */
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
+  /* Use box-shadow instead of border so the text isn't offset */
+  /* box-shadow: inset 0 -3px transparent; */
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-    background: inherit;
-    box-shadow: none
+  background: inherit;
+  box-shadow: none;
 }
 
 label:focus {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 #clock,
@@ -65,78 +62,135 @@ label:focus {
 #mpd,
 #window,
 #workspaces,
-
 #workspaces button {
-    /* color: #b8b1a9; */
-    color: #bbbab8;
-    padding: 0;
-    margin: 0 2px;
+  /* color: #b8b1a9; */
+  color: #929292;
+  padding: 0;
+  margin: 0 2px;
 }
 
 #workspaces button.active {
-    /* color: #ffffff; */
+  /* color: #ffffff; */
 }
 
 #custom-flair {
-    font-weight: 900;
-    padding: 0 12px;
-    color: white;
-    background-image: linear-gradient(50deg, #ff9ad7 40%, #84c8ff 75%, #78d89b);
-    /* border-radius: 16px;
-    margin: 6px 0 0 2px; */
+  font-weight: 900;
+  padding: 0 12px;
+  color: white;
+  background-image: linear-gradient(50deg, #f181c4 40%, #7cbcf1 75%, #77e9a1);
+  border-radius: 16px;
+  margin: 6px 16px;
 }
 
 #custom-disk {
 }
 
-#custom-disk-nvme {
-}
-
-#custom-disk-storage {
-}
-
-#custom-gpu-temp {
-}
-
-#custom-cpu-temp {
-}
-
 #clock {
-    margin: 8px 8px;
+  margin: 0 8px;
+}
+
+#custom-ffxiv-icon {
+  background-image:
+    linear-gradient(0deg, rgba(140, 103, 86, 0.2), rgba(140, 103, 86, 0.2)),
+    url("/home/damon/.config/assets/ffxiv_icon.png");
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+  padding: 4px 10px;
+  margin-bottom: 1px;
+}
+
+/* 1920 x 620 */
+#ffxiv {
+  /* background-image: linear-gradient(60deg, rgba(72, 64, 64, 0.9) 65%, rgba(44, 45, 46, 0.03)), url("/home/damon/.config/assets/ffxiv_banner.png"); */
+  background-repeat: no-repeat;
+  background-size: 640px 207px;
+  background-position: 0px -28px;
+  padding: 0 0px 0 0px;
+}
+
+#custom-hsr-icon {
+  background-image:
+    linear-gradient(0deg, rgba(201, 150, 255, 0.03), rgba(201, 150, 255, 0.2)),
+    url("/home/damon/.config/assets/hsr_icon.png");
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  padding: 0 12px 0 12px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+/* 2560 x 1440 */
+#hsr {
+  background-image:
+    linear-gradient(90deg, rgba(41, 41, 50, 0.8), rgba(23, 22, 22, 0.2)),
+    url("/home/damon/.config/assets/hsr_4_0.jpg");
+  background-repeat: no-repeat;
+  background-size: 640px 360px;
+  background-position: -0px -208px;
+  padding: 0 32px 0 0;
+  margin-right: 16px;
+  color: white;
+  border-radius: 0 8px 0 0;
 }
 
 #custom-start {
-    font-size: 20px;
-    padding: 0 10px 0 10px;
+  /* background-image: url("/home/damon/.config/assets/warp_75.png");
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    padding: 0 10px; */
+  padding: 0 8px;
+  font-size: 18px;
 }
 
-.chip {
-    border-radius: 2px;
-    margin: 4px 2px;
-    padding: 0 96px 0 8px;
+#custom-disk {
+  color: #78d89b;
+}
+
+/* .chip, 
+#custom-t1,
+#custom-t2, 
+#custom-t3,
+#custom-t4p1,
+#custom-t4p2 {
+    border-radius: 24px;
+    padding: 0 8px;
+    margin: 6px 4px;
     color: white;
+} */
+
+.job,
+#custom-mnk,
+#custom-rdm {
+  background-image: url("https://assets.rpglogs.com/img/ff/icons/actors.png?v=35");
+  background-repeat: no-repeat;
+  background-size: 700px 20px;
+  padding: 0 6px 0 6px;
+  margin-top: 5px;
+  margin-left: 4px;
 }
 
-.running {
-    border: 1px solid rgb(255, 255, 255);
-    border-left: 12px solid rgb(255, 255, 255);
+#custom-mnk {
+  background-position: -338px 0;
 }
 
-.hsr {
-    background-image: linear-gradient(50deg, rgba(93, 93, 93, 0.8) 30%, rgba(157, 82, 255, 0.03)), url("/home/damon/.config/assets/hsr_3_8.png");
-    background-repeat: no-repeat;
-    background-size: 320px 160px;
-    background-position: 0px -25px;}
+#custom-rdm {
+  background-position: -500px 0;
+}
 
-.zzz {
-    background-image: linear-gradient(50deg, rgba(103, 103, 103, 0.8) 30%, rgba(255, 146, 82, 0.03)), url("/home/damon/.config/assets/zzz_2_5.png");
-    background-repeat: no-repeat;
-    background-size: 320px 160px;
-    background-position: -35px -48px;}
+/* Rank colours */
+.orange,
+#custom-t1,
+#custom-t2,
+#custom-t3 {
+  color: rgb(255, 128, 0);
+}
 
-.wuwa {
-    background-image: linear-gradient(50deg, rgba(170, 170, 170, 0.8) 30%, rgba(82, 128, 255, 0.03)), url("/home/damon/.config/assets/wuwa_3_0.png");
-    background-repeat: no-repeat;
-    background-size: 320px 160px;
-    background-position: -20px -40px;
+.purple,
+#custom-t4p1 {
+  color: rgb(187, 84, 255);
+}
+
+.blue,
+#custom-t4p2 {
+  color: #3b90ff;
 }

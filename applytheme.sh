@@ -10,6 +10,7 @@ currentPath=/home/damon/Documents/rice
 # Copy over and replace files
 cp -r $currentPath/scripts/. $configPath/scripts/
 cp -r $currentPath/assets/. $configPath/assets/
+cp -r $currentPath/applications/. /home/damon/.local/share/applications/
 cp -r $currentPath/waybar/. $configPath/waybar/
 cp -r $currentPath/eww/. $configPath/eww/
 cp -r $currentPath/fastfetch/. $configPath/fastfetch/

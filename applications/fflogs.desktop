@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=FFLogs
+Exec=/home/damon/Documents/fflogs/AppRun
+Terminal=false
+Categories=XIV
+Keywords=fflogs

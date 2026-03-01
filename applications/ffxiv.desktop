@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Final Fantasy
+Comment=Play Final Fantasy Online on Steam
+Exec=steam steam://rungameid/39210
+Icon=steam_icon_39210
+Terminal=false
+Type=Application
+Categories=Game;
