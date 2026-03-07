@@ -10,7 +10,9 @@
     // "custom/flair",
     // "custom/start",
   ],
-  "modules-center": [],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
   "modules-right": [
     // "custom/ffxiv",
     // "hyprland/workspaces",
@@ -61,7 +63,7 @@
     "format": "{icon}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["FF Logs"],
+    "ignore-list": ["FF Logs", ""],
     "rewrite": { "Firefox Developer Edition": "Firefox Dev" },
     "active-first": false
   },

@@ -70,7 +70,7 @@ label:focus {
 }
 
 #workspaces button.active {
-  /* color: #ffffff; */
+  color: white;
 }
 
 #custom-flair {

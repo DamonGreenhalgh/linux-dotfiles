@@ -1,10 +1,21 @@
 window {
     background-color: transparent;
-    max-width: 256px;
     box-shadow: none;
+    background-image: url("/home/damon/Documents/rice/assets/wofi-2.png");
+    background-position: left;
+    background-size: auto 512px;
+    background-repeat: no-repeat;
+    background-color: #1e1e21;
+    font-family: "JetBrainsMono Nerd Font Mono", "FontAwesome";
+}
+
+#scroll {
+    margin-left: 400px;
+    background-color: #1a1a1c;
 }
 
 #input {
+    margin-left: 400px;
     color: #929292;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -12,6 +23,7 @@ window {
     border: none;
     border-radius: 0;
     background-color: #26282b;
+    padding: 16px;
 }
 
 #input:focus {
@@ -20,14 +32,21 @@ window {
     box-shadow: none;
 }
 
+#input > image {
+    margin-left: 20px;
+    margin-right: 18px;
+}
+
 #outer-box {
-    background-color: #1a1a1c;
+    /* background-color: #1a1a1c; */
+    background-color: transparent;
     border-radius: 0px;
     border: 1px solid #38383e;
 }
 
 #inner-box {
-    background-color:#1a1a1c;
+    /* background-color:#1a1a1c; */
+    background-color: transparent;
 }
 
 #entry {
@@ -49,4 +68,5 @@ window {
 
 #img {
     margin-right: 16px;
+    margin-left: 8px;
 }
